@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Layout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <div class="container">
+        <aside class="menu">
+            <div class="img-container">
+                <img src="./assets/img.png" alt="imagem ">
+            </div>            
+            <h2>Alexia Evelyn</h2>
+            <p>Apaixonada por tecnologia e por tudo que ela pode proporcionar</p>
+            <ul  class="icon-list">
+                <li><a href="alexiaevellyn20@gmail.com" title="Email"><i class="fas fa-envelope"></i>Email</a></li>
+                <li><a href="https://www.linkedin.com/in/alexia-evelyn/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i>LinkedIn</a></li>
+                <li><a href="https://github.com/alexiaev20" target="_blank" title="GitHub"><i class="fab fa-github"></i>GitHub</a></li>
+                <li><a href="https://discord.com/users/alee_ev" target="_blank" title="Discord"><i class="fab fa-discord"></i>Discord</a></li>
+            </ul>
+        </aside>
+        <main class="content">
+            <h1>Lista de Tarefas</h1>
+            <div class="tables">
+                <div class="table">
+                    <h2>Dia</h2>
+                    <ol id="dia-tasks"></ol>
+                    <div class="add-task-input-container"></div>
+                    <input type="text" id="new-dia-task" class="add-task-inputs" placeholder="Adicionar nova tarefa">
+                    <select id="dia-priority" class="add-task-inputs">
+                        <option value="">Escolha o nível de prioridade</option>
+                        <option value="low">Baixa</option>
+                        <option value="medium">Média</option>
+                        <option value="high">Alta</option>
+                    </select>
+                    <button onclick="addTask('dia')" class="add-task-inputs">Adicionar</button>
+                </div>
+                <div class="table">
+                    <h2>Noite</h2>
+                    <ol id="noite-tasks"></ol>
+                    <div class="add-task-container"></div>
+                    <input type="text" id="new-noite-task" placeholder="Adicionar nova tarefa">
+                    <select id="noite-priority" class="add-task-inputs">
+                        <option value="">Escolha o nível de prioridade</option>
+                        <option value="low">Baixa</option>
+                        <option value="medium">Média</option>
+                        <option value="high">Alta</option>
+                    </select>
+                    <button onclick="addTask('noite')" class="add-task-inputs">Adicionar</button>
+                </div>
+            </div>
+            
+        </main>
+    </div>
+   
+    <script src="scripts.js"></script>
+</body>
+</html>
